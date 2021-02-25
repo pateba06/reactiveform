@@ -1,0 +1,16 @@
+[{
+    "name": "Badal",
+    "password": "kentucky",
+    "role": "Ui Developer"
+},
+{
+    "name": "Sheetal",
+    "password": "bharuch",
+    "role": "QA analyst"
+},
+{
+    "name": "Saroj",
+    "password": "Ramesh",
+    "role": "House Wife"
+}
+]

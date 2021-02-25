@@ -1,0 +1,40 @@
+<h1 class="text-center">Reactive Form Validation</h1>
+<form class="form-horizontal" [formGroup]="loginForm">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="" placeholder="Enter name"
+        formControlName="name">
+        <small class="error" *ngIf="!checkName.valid && checkName.touched">Name is required</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="" placeholder="Enter password"
+        formControlName="pwd">
+        <small class="error" *ngIf="!checkpwd.valid && checkpwd.touched">Password is required</small>
+      </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="city">City:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="" placeholder="Enter city"
+          formControlName="city">
+          <small class="error" *ngIf="!checkcity.valid && checkcity.touched">City validation error</small>
+        </div>
+      </div>
+    <!-- <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+      </div> 
+    </div>  -->
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" (click)="submitForm(loginForm)" [disabled]=loginForm.invalid >Submit</button>
+      </div>
+    </div>
+  </form>
+  <h2 class="success">{{successText}}</h2>
